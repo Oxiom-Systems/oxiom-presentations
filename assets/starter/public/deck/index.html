@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{DECK_SUBTITLE_HTML}}" />
+    <meta name="theme-color" content="#07111d" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{{DECK_TITLE_HTML}}</title>
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/vej8hmi.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./theme.css" />
+    <script src="./script-data.js" defer></script>
+    <script src="./deck.js" defer></script>
+  </head>
+  <body
+    class="oxiom-template-deck"
+    data-storage-key="{{SLUG}}-slide-index-v1"
+    data-channel="{{SLUG}}-presentation-v1"
+    data-script-global="{{SCRIPT_GLOBAL}}"
+    data-deck-title="{{DECK_TITLE_HTML}}"
+    data-presenter-script="./presenter.html"
+    data-step-mode="reveal"
+  >
+    <a class="skip-link" href="#slide-1">Skip to presentation</a>
+
+    <header class="deck-chrome" aria-label="Presentation controls">
+      <a class="wordmark" href="#slide-1" aria-label="Return to title">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span>{{CLIENT_NAME_HTML}} <b>/ {{DECK_TITLE_HTML}}</b></span>
+      </a>
+      <div class="chrome-cluster">
+        <a class="oxiom-signature" href="https://oxiomsystems.com" target="_blank" rel="noreferrer" aria-label="Visit Oxiom Systems">
+          <img src="./assets/oxiom-mark.svg" alt="" />
+          <span><b>Oxiom Systems</b><small>oxiomsystems.com</small></span>
+        </a>
+        <div class="chrome-actions">
+          <button class="text-button" type="button" data-action="overview" title="Overview (O)">Overview</button>
+          <button class="text-button" type="button" data-action="notes" title="Presenter notes (N)">Notes</button>
+          <button class="text-button" type="button" data-action="script" title="Presenter console (P)">Presenter view</button>
+          <button class="text-button" type="button" data-action="audience" title="Audience view (A)">Audience view</button>
+          <button class="icon-button" type="button" data-action="fullscreen" title="Fullscreen (F)" aria-label="Enter fullscreen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <a class="print-signature" href="https://oxiomsystems.com">
+      <img src="./assets/oxiom-mark.svg" alt="" />
+      <span><b>Oxiom Systems</b><small>oxiomsystems.com</small></span>
+    </a>
+
+    <main class="deck" id="deck" aria-live="polite">
+      <section class="slide template-opening is-active" id="slide-1" data-title="The opening promise">
+        <div class="template-grid" aria-hidden="true"></div>
+        <div class="template-orbit template-orbit--one" aria-hidden="true"></div>
+        <div class="template-orbit template-orbit--two" aria-hidden="true"></div>
+        <div class="slide-inner template-opening__copy">
+          <p class="eyebrow" data-reveal>{{CLIENT_NAME_HTML}} · Source-led presentation</p>
+          <h1 data-reveal>{{DECK_TITLE_HTML}}</h1>
+          <p class="template-opening__lead" data-reveal>{{DECK_SUBTITLE_HTML}}</p>
+          <div class="template-opening__rule" data-reveal>
+            <span>Context</span><span>Evidence</span><span>Decision</span>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Open with the audience's real context and the one outcome this presentation will help them reach. Keep the first slide sparse and state only what the source material can support. [Sources] STARTER-01 in sources/source-ledger.txt; replace with the authoritative opening sources.
+        </aside>
+      </section>
+
+      <section class="slide template-evidence" id="slide-2" data-title="Evidence changes the conversation">
+        <div class="slide-inner template-evidence__layout">
+          <header data-reveal>
+            <p class="eyebrow">02 · Strongest evidence</p>
+            <h2>Evidence changes the conversation.</h2>
+          </header>
+          <div class="template-evidence__facts">
+            <article data-reveal>
+              <small>01 · Fact</small>
+              <strong>Put the most decision-relevant proof first.</strong>
+              <p>Use a metric, observation, quote, screenshot, or accepted constraint from the source set.</p>
+            </article>
+            <article data-reveal>
+              <small>02 · Meaning</small>
+              <strong>Explain what the evidence changes.</strong>
+              <p>Connect the fact to risk, priority, value, readiness, or the question the audience must answer.</p>
+            </article>
+            <article data-reveal>
+              <small>03 · Boundary</small>
+              <strong>Keep the source's qualification visible.</strong>
+              <p>Do not turn a target, estimate, proposal, or illustration into an established outcome.</p>
+            </article>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Turn the strongest source material into two or three facts the audience can understand at a glance, then explain why those facts matter. [Sources] STARTER-01 in sources/source-ledger.txt; replace each fact with its supporting source identifier.
+        </aside>
+      </section>
+
+      <section class="slide template-split" id="slide-3" data-title="Make the gap explicit">
+        <div class="template-split__field" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="slide-inner template-split__layout">
+          <div class="template-split__claim">
+            <p class="eyebrow" data-reveal>03 · Interpretation</p>
+            <h2 data-reveal>Make the gap <span>explicit.</span></h2>
+            <p data-reveal>Use this split to separate the conclusion from the proof, trade-offs, or implications that support it.</p>
+          </div>
+          <ol class="template-split__list">
+            <li data-reveal><span>01</span><strong>What is working or known now</strong></li>
+            <li data-reveal><span>02</span><strong>What remains uncertain or unproven</strong></li>
+            <li data-reveal><span>03</span><strong>What evidence would close the gap</strong></li>
+          </ol>
+        </div>
+        <aside class="speaker-notes">
+          Use an editorial split when one side should carry the conclusion and the other should carry the proof or implications. Preserve every material qualification from the source. [Sources] STARTER-01 in sources/source-ledger.txt; replace with the sources for the current state, gap, and acceptance evidence.
+        </aside>
+      </section>
+
+      <section class="slide template-path" id="slide-4" data-title="A gated path makes progress credible">
+        <div class="slide-inner template-path__layout">
+          <header data-reveal>
+            <p class="eyebrow">04 · Controlled path</p>
+            <h2>A gated path makes progress credible.</h2>
+            <p>Every stage earns the next through named evidence, ownership, or acceptance.</p>
+          </header>
+          <div class="template-path__rail" data-reveal>
+            <article>
+              <span>01</span><small>Understand</small><strong>Establish the real baseline</strong><p>Sources, owners, constraints, and the decision job.</p>
+            </article>
+            <article>
+              <span>02</span><small>Prove</small><strong>Test the uncertain link</strong><p>A bounded proof with a visible acceptance condition.</p>
+            </article>
+            <article>
+              <span>03</span><small>Decide</small><strong>Scale, redesign, or stop</strong><p>The next move follows the evidence, not momentum.</p>
+            </article>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Show only the stages that matter to the decision in the room. Every gate should name the proof, owner, or acceptance condition that lets the work move forward. [Sources] STARTER-01 in sources/source-ledger.txt; replace with the programme, roadmap, or decision-gate sources.
+        </aside>
+      </section>
+
+      <section class="slide template-closing" id="slide-5" data-title="Close on the decision">
+        <div class="template-grid template-grid--closing" aria-hidden="true"></div>
+        <div class="slide-inner template-closing__layout">
+          <p class="eyebrow" data-reveal>05 · The audience outcome</p>
+          <h2 data-reveal>Close on the <span>decision.</span></h2>
+          <p data-reveal>Resolve the opening promise, name the next gate, and leave ownership unmistakable.</p>
+          <div class="template-closing__decision" data-reveal>
+            <small>Next step</small>
+            <strong>Replace this with the specific, authorized action or discussion.</strong>
+          </div>
+        </div>
+        <aside class="speaker-notes">
+          Resolve the opening promise and name the decision, action, or discussion that should follow. Keep the request bounded so it does not imply authorization that has not been given. [Sources] STARTER-01 in sources/source-ledger.txt; replace with the source that authorizes or frames the requested next step.
+        </aside>
+      </section>
+    </main>
+
+    <footer class="deck-footer">
+      <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      <button class="nav-button nav-button--previous" type="button" data-action="previous" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+      </button>
+      <div class="counter" aria-label="Slide position"><span id="current-slide">01</span><i>/</i><span id="total-slides">05</span></div>
+      <p class="current-title" id="current-title">The opening promise</p>
+      <span class="kickoff-duration">source → story → decision</span>
+      <button class="nav-button nav-button--next" type="button" data-action="next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+      </button>
+    </footer>
+
+    <dialog class="overview" id="overview-dialog" aria-labelledby="overview-title">
+      <header>
+        <div><p class="eyebrow">Presentation overview</p><h2 id="overview-title">Choose a slide</h2></div>
+        <button class="icon-button" type="button" data-action="close-overview" aria-label="Close overview">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </header>
+      <div class="overview-grid" id="overview-grid"></div>
+    </dialog>
+
+    <aside class="notes-panel" id="notes-panel" aria-label="Speaker notes">
+      <header>
+        <div><span>Read-aloud presenter script</span><strong id="notes-title">The opening promise</strong></div>
+        <button class="icon-button" type="button" data-action="close-notes" aria-label="Close speaker notes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </header>
+      <div class="notes-meta"><span id="notes-duration">About 35 seconds</span><button class="notes-link" type="button" data-action="script">Open complete script ↗</button></div>
+      <div id="notes-content"></div>
+    </aside>
+
+    <div class="help-toast" id="help-toast" role="status">
+      <span><kbd>←</kbd><kbd>→</kbd> navigate</span><span><kbd>Space</kbd> reveal</span><span><kbd>O</kbd> overview</span><span><kbd>N</kbd> notes</span><span><kbd>F</kbd> fullscreen</span>
+    </div>
+  </body>
+</html>

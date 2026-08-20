@@ -1,0 +1,27 @@
+name: Validate skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scaffold a clean presentation
+        run: |
+          node scripts/scaffold.mjs \
+            --output "$RUNNER_TEMP/sample-deck" \
+            --title "Orbital Readiness Review" \
+            --client "Sample Aerospace" \
+            --subtitle "Turn programme evidence into a clear readiness decision."
+      - name: Validate the generated deck
+        run: npm test --prefix "$RUNNER_TEMP/sample-deck"

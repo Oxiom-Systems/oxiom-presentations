@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07111d" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Presenter Console — {{DECK_TITLE_HTML}}</title>
+    <link rel="preconnect" href="https://use.typekit.net" />
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/vej8hmi.css" />
+    <link rel="stylesheet" href="./presenter-styles.css" />
+    <script src="./script-data.js" defer></script>
+    <script src="./presenter.js" defer></script>
+  </head>
+  <body
+    class="presenter-console"
+    data-audience-url="./index.html?audience=1"
+    data-storage-key="{{SLUG}}-slide-index-v1"
+    data-channel="{{SLUG}}-presentation-v1"
+    data-script-global="{{SCRIPT_GLOBAL}}"
+  >
+    <header class="script-header">
+      <a class="script-brand" href="./index.html">
+        <span aria-hidden="true"></span>
+        <b>{{CLIENT_NAME_HTML}} / {{DECK_TITLE_HTML}}</b>
+      </a>
+      <div class="script-actions">
+        <label class="follow-toggle">
+          <input id="follow-live" type="checkbox" checked />
+          <span>Follow audience</span>
+        </label>
+        <button type="button" id="print-script">Print script</button>
+        <a href="./index.html">Open control deck</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="presenter-control-panel" aria-label="Audience presentation controls">
+        <div class="audience-state">
+          <span class="audience-state-dot" aria-hidden="true"></span>
+          <div>
+            <small>Audience screen</small>
+            <strong id="audience-status">Not open yet</strong>
+          </div>
+        </div>
+        <div class="presenter-control-actions">
+          <button class="presenter-launch-button" type="button" id="open-audience">Open audience screen</button>
+          <button type="button" id="restart-animation" disabled>Restart animation</button>
+        </div>
+        <p class="presenter-shortcuts">
+          <span><kbd>Space</kbd> next slide</span>
+          <span><kbd>←</kbd> previous</span>
+          <span><kbd>R</kbd> restart animation</span>
+          <span><kbd>P</kbd> open audience</span>
+        </p>
+      </section>
+
+      <section class="script-intro">
+        <p>Presenter script · {{CLIENT_NAME_HTML}}</p>
+        <h1>{{DECK_TITLE_HTML}}</h1>
+        <p>Five starter slides. Replace the sample story with source-grounded narration.</p>
+      </section>
+
+      <nav class="script-index" aria-label="Presenter slide navigation">
+        <label for="slide-select">Jump to slide</label>
+        <select id="slide-select"></select>
+        <span id="live-status" role="status" aria-live="polite">Ready to connect</span>
+      </nav>
+
+      <div class="script-list" id="script-list"></div>
+    </main>
+
+    <footer class="script-footer">
+      <button type="button" id="script-previous">Previous</button>
+      <div>
+        <span id="script-position">01 / 05</span>
+        <strong id="script-title">The opening promise</strong>
+      </div>
+      <button type="button" id="script-next">Next</button>
+    </footer>
+  </body>
+</html>

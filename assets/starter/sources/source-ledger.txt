@@ -1,0 +1,17 @@
+SOURCE LEDGER — {{DECK_TITLE}}
+
+Replace these starter records with the authoritative sources used by the final deck.
+
+[STARTER-01]
+Type: scaffold copy
+Owner: Oxiom presentation starter
+Supports: neutral sample narrative and the five demonstration slide archetypes
+Authority note: sample content only; it is not evidence for a client presentation
+
+[STARTER-02]
+Type: identity asset
+Path: public/deck/assets/oxiom-mark.svg
+Owner: Oxiom Systems
+Supports: maker signature in the deck chrome and print output
+
+For each real source, record: identifier, date, owner or publisher, local path or URL, supported claims/assets, and any limitation such as proposed, estimated, illustrative, confidential, or unapproved.

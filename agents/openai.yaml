@@ -1,0 +1,9 @@
+interface:
+  display_name: "Oxiom Presentations"
+  short_description: "Build cinematic, evidence-led HTML5 decks"
+  icon_small: "./assets/oxiom-mark.svg"
+  icon_large: "./assets/oxiom-mark.svg"
+  brand_color: "#60D8FF"
+  default_prompt: "Use $oxiom-presentations to turn these source materials into a polished dual-screen HTML5 presentation."
+policy:
+  allow_implicit_invocation: true

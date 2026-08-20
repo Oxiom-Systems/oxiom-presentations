@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Oxiom Systems">
+  <defs>
+    <linearGradient id="markA" x1="34" y1="34" x2="222" y2="222" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff7a4f"/>
+      <stop offset="0.28" stop-color="#f1b84b"/>
+      <stop offset="0.52" stop-color="#9adf8f"/>
+      <stop offset="0.74" stop-color="#17b9ca"/>
+      <stop offset="1" stop-color="#a891ff"/>
+    </linearGradient>
+    <linearGradient id="markB" x1="222" y1="26" x2="38" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#17b9ca"/>
+      <stop offset="0.42" stop-color="#a891ff"/>
+      <stop offset="0.7" stop-color="#ff7a4f"/>
+      <stop offset="1" stop-color="#f1b84b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2b727c" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <circle cx="128" cy="128" r="94" fill="url(#markA)" filter="url(#shadow)"/>
+  <path d="M60 134 C93 58 160 38 197 78 C162 80 124 116 102 204 C82 190 66 162 60 134 Z" fill="url(#markB)" opacity="0.82"/>
+  <circle cx="128" cy="128" r="94" fill="#ffffff" opacity="0.72"/>
+  <circle cx="128" cy="128" r="38" fill="#fff7ce" opacity="0.88"/>
+  <text x="128" y="150" text-anchor="middle" font-family="Avenir Next, Avenir, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="0" fill="#081a20">OX</text>
+</svg>
