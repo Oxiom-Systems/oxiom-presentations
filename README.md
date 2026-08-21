@@ -22,12 +22,12 @@ The skill keeps the presentation engine consistent while treating client identit
 
 Ask Codex:
 
-> Use `$skill-installer` to install `https://github.com/jjziets/oxiom-presentations`.
+> Use `$skill-installer` to install `https://github.com/Oxiom-Systems/oxiom-presentations`.
 
 Or install manually:
 
 ```bash
-git clone https://github.com/jjziets/oxiom-presentations \
+git clone https://github.com/Oxiom-Systems/oxiom-presentations \
   ~/.codex/skills/oxiom-presentations
 ```
 
