@@ -56,12 +56,12 @@ class CodeQLContract(unittest.TestCase):
 
  def test_thin_caller_immutable_pin_and_weekly_default_branch_contract(self):
   text=(ROOT/'.github/workflows/codeql.yml').read_text()
-  self.assertIn('uses: Oxiom-Systems/oxiom-presentations/.github/workflows/ci-codeql-recipe.yml@2b61db91f4842d774642b44a3c11523033730412',text)
+  self.assertIn('uses: Oxiom-Systems/oxiom-presentations/.github/workflows/ci-codeql-recipe.yml@912611daf6a44f2494e13b20bffcb872d6f96d3e',text)
   self.assertIn('cron:',text);self.assertIn("branches: [main, dev]",text)
   self.assertIn('workflow_dispatch:',text);self.assertIn('pull_request:',text);self.assertIn('push:',text)
   self.assertIn('upload_results: false',text)
   for forbidden in ['secrets:', 'secrets.', 'inherit','pull_request_target','repository_dispatch','runs-on:','steps:']:self.assertNotIn(forbidden,text)
   pin=re.search(r'uses: (\S+)',text)[1]
-  self.assertEqual(pin,'Oxiom-Systems/oxiom-presentations/.github/workflows/ci-codeql-recipe.yml@2b61db91f4842d774642b44a3c11523033730412')
+  self.assertEqual(pin,'Oxiom-Systems/oxiom-presentations/.github/workflows/ci-codeql-recipe.yml@912611daf6a44f2494e13b20bffcb872d6f96d3e')
 
 if __name__=='__main__':unittest.main()
