@@ -1,0 +1,49 @@
+name: oxiom-presentations public CPU build recipe
+on:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  smoke-test:
+    if: >-
+      github.repository_id == '1341515318' &&
+      (
+        ((github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+         github.ref_protected == true &&
+         (github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main')) ||
+        (github.event_name == 'pull_request' &&
+         github.event.pull_request.head.repo.id == 1341515318 &&
+         (github.base_ref == 'dev' || github.base_ref == 'main'))
+      )
+    runs-on:
+      group: ci-build-public-ephemeral
+      labels: [ci-linux-cpu-v1-r1341515318]
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the event SHA without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up managed Python for public route contracts
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Test the public leaf event and isolation contracts
+        run: python -m unittest discover -s tests -p 'test_ci_public_route.py'
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Scaffold a clean presentation
+        run: |
+          node scripts/scaffold.mjs \
+            --output "$RUNNER_TEMP/sample-deck" \
+            --title "Orbital Readiness Review" \
+            --client "Sample Aerospace" \
+            --subtitle "Turn programme evidence into a clear readiness decision."
+      - name: Validate the generated deck
+        run: npm test --prefix "$RUNNER_TEMP/sample-deck"
