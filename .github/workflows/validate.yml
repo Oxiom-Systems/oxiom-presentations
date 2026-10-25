@@ -15,4 +15,4 @@ jobs:
   smoke-test:
     permissions:
       contents: read
-    uses: Oxiom-Systems/oxiom-presentations/.github/workflows/ci-build-recipe.yml@1b084462ae1247f2fe9b6876e55855eae9f47c6e
+    uses: Oxiom-Systems/oxiom-presentations/.github/workflows/ci-build-recipe.yml@824f67ab351c606664b63900e2d70bc38d404a8f
